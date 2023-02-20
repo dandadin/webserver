@@ -27,7 +27,7 @@ services:
     volumes:
       - ./composer:/app
       - .:/webserver
-    command: "install"
+    command: "update"
 #  certbot:
 #    image: certbot/certbot:latest
 #    volumes:
