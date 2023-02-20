@@ -4,16 +4,23 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/dandadin/deca.git"
+            "url": "https://github.com/dandadin/webserver-deca.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/dandadin/webserver-personal.git"
         }
     ],
     "require": {
-        "dandadin/deca-sites": "dev-master"
+        "dandadin/webserver-deca": "dev-master",
+        "dandadin/webserver-personal": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
-            "trap 'mv ./vendor/dandadin/deca-sites/*.php /webserver/html/deca/' EXIT",
-            "trap 'mv ./vendor/dandadin/deca-sites/*.html /webserver/html/deca/' EXIT"
+            "trap 'mv ./vendor/dandadin/webserver-deca/*.php /webserver/html/deca/' EXIT",
+            "trap 'mv ./vendor/dandadin/webserver-deca/*.html /webserver/html/deca/' EXIT",
+            "trap 'mv ./vendor/dandadin/webserver-personal/*.php /webserver/html/personal/' EXIT",
+            "trap 'mv ./vendor/dandadin/webserver-personal/*.html /webserver/html/personal/' EXIT"
         ]
     }
 }
